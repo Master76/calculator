@@ -1,0 +1,19 @@
+---
+Language:        Cpp
+BasedOnStyle:  Mozilla
+AlignAfterOpenBracket: DontAlign
+AlignEscapedNewlines: Left
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortIfStatementsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: false
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+BinPackArguments: true
+BinPackParameters: true
+BreakBeforeBinaryOperators: None
+BreakConstructorInitializers: BeforeComma
+IndentWidth:     2
+Standard:        Cpp11
+TabWidth:        8
+UseTab:          Never
+...
