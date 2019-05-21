@@ -13,7 +13,9 @@ private:
   int val;
 
 public:
-  constant(int val) { this->val = val; }
+  constant(int val)
+    : val(val)
+  {}
   int value() override { return val; }
 };
 
@@ -30,7 +32,7 @@ public:
     : op(op)
     , val(nullptr)
   {}
-  int value() { return op(val->value()); }
+  int value() override { return op(val->value()); }
 };
 
 class binary : public virtual expr
@@ -48,5 +50,5 @@ public:
     , left(nullptr)
     , right(nullptr)
   {}
-  int value() { return op(left->value(), right->value()); }
+  int value() override { return op(left->value(), right->value()); }
 };

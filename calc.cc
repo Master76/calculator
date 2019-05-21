@@ -1,4 +1,5 @@
 #include "calc.h"
+#include "cstdlib"
 
 inline bool isDigit(char chr)
 {
@@ -67,11 +68,11 @@ expr* calculator::parse(
     if (expected & UNARY_OP) {
       switch (chr) {
         case '+':
-          op = operators::unaryAdd;
+          op = (void*)operators::unaryAdd;
           opType = UNARY_OP;
           continue;
         case '-':
-          op = operators::unarySub;
+          op = (void*)operators::unarySub;
           opType = UNARY_OP;
           continue;
       }
@@ -79,19 +80,19 @@ expr* calculator::parse(
     if (expected & BINARY_OP) {
       switch (chr) {
         case '+':
-          op = operators::binaryAdd;
+          op = (void*)operators::binaryAdd;
           opType = BINARY_OP;
           continue;
         case '-':
-          op = operators::binarySub;
+          op = (void*)operators::binarySub;
           opType = BINARY_OP;
           continue;
         case '*':
-          op = operators::binaryMul;
+          op = (void*)operators::binaryMul;
           opType = BINARY_OP1;
           continue;
         case '/':
-          op = operators::binaryDiv;
+          op = (void*)operators::binaryDiv;
           opType = BINARY_OP1;
           continue;
       }

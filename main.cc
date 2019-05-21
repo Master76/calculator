@@ -4,7 +4,7 @@
 
 #define MAX_SIZE 0xff
 
-int main(void)
+int main(int argc, char const* argv[])
 {
   calculator* calc;
   char formula[MAX_SIZE];
