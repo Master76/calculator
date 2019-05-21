@@ -1,6 +1,4 @@
-#include "calc.h"
-#include <cstring>
-#include <iostream>
+#include "stdafx.h"
 
 #define MAX_SIZE 0xff
 

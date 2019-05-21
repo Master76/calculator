@@ -13,6 +13,7 @@ file(GLOB source_files
   "expr.h"
   "op.h"
   "status.h"
+  "stdafx.h"
   "main.cc"
 )
 
