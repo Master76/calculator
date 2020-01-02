@@ -14,6 +14,7 @@ calculator::calculator(char* formula, int length)
   : formula(formula)
   , length(length)
   , exprRoot(nullptr)
+  , res(nullptr)
 {}
 
 calculator::~calculator()

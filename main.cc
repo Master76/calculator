@@ -13,12 +13,12 @@ int main(int argc, char const* argv[])
 
   std::strcpy(formula, argv[1]);
   out = std::ofstream(argv[2]);
-  std::cout.rdbuf(out.rdbuf());
 
   calc = new calculator(formula, strlen(formula));
   try {
     result = calc->result();    
     std::cout << formula << "=" << result << std::endl;
+    out << result << std::endl;
   } catch (int errcode) {
     std::cout << "errcode=" << errcode << std::endl;
     return errcode;
